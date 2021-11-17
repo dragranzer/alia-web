@@ -35,7 +35,7 @@ function Footer() {
                         Kontak Kami
                     </div>
                 </div>
-                <div className={styles.item}>
+                <div className={styles.item3}>
                     <div className={styles.title}>
                         Totalitas Teknik Indonesia
                     </div>
