@@ -23,12 +23,21 @@
     /* background: red; */
     gap: 5%;
     align-items: center;
-    width: 60%;
+    width: 70%;
+}
+
+.RightData{
+    display: flex;
+    /* background: aqua; */
+    gap: 10%;
+    align-items: center;
+    width: 90%;
 }
 
 .item{
     font-family: Poppins;
     font-size: 18px;
+    /* width: 300px; */
     /* background: aqua; */
     /* width: 100%; */
 }
@@ -53,4 +62,76 @@
 .search input::-webkit-input-placeholder {
     font-size: 14px;
     line-height: 3;
+}
+
+.searchDown input::-webkit-input-placeholder {
+    font-size: 14px;
+    line-height: 3;
+}
+
+.hamburger{
+    display: none;
+}
+
+.dropdown{
+    display: none;
+}
+
+.dropdownActive{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: #FFFFFF;
+    /* border: 1px solid; */
+}
+
+.dropdownItem{
+    font-size: 18px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.dropdownItem:hover{
+    background: rgb(39, 147, 219);
+    color: #FFFFFF;
+}
+
+.searchDown{
+    font-size: 18px;
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    height: 40px;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 1320px) {
+    .RightData{
+        gap: 5%;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .RightData{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+        /* margin-right: 30px; */
+    }
 }

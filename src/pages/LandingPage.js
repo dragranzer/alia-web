@@ -73,7 +73,7 @@ function LandingPage() {
                         {
                             img.map((item, index) =>{
                                 return(
-                                    <div className={styles.img}>
+                                    <div className={styles.img} key={index}>
                                         <img src={item.url} alt="" />
                                         <div>
                                             {item.title}
