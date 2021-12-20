@@ -104,28 +104,28 @@ function LandingPage() {
                         <div className={styles.content}>
                             <img src={ic_globe1} alt="" />
                             <div className={styles.title2}>
-                                Kualitas Terbaik
+                                Harga Kompetitif
                             </div>
                             <div className={styles.cap4}>
-                                Produk Alia sudah terbukti berkualitas dan Terbaik
+                                harga yang kami tawarkan merupakan the best deal
                             </div>
                         </div>
                         <div className={styles.content}>
                             <img src={ic_globe2} alt="" />
                             <div className={styles.title2}>
-                                Kualitas Terbaik
+                                Delivery Cepat
                             </div>
                             <div className={styles.cap4}>
-                                Produk Alia sudah terbukti berkualitas dan Terbaik
+                                kami adalah solusi tercepat. karena waktu sangat berharga
                             </div>
                         </div>
                         <div className={styles.content}>
                             <img src={ic_globe3} alt="" />
                             <div className={styles.title2}>
-                                Kualitas Terbaik
+                                Support yang Baik
                             </div>
                             <div className={styles.cap4}>
-                                Produk Alia sudah terbukti berkualitas dan Terbaik
+                                Menyediakan support dengan pelayanan terbaik & Professional
                             </div>
                         </div>
                     </div>

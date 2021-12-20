@@ -3,6 +3,7 @@ import NotFound from './pages/NotFound';
 import Produk from './pages/Produk';
 import TentangKami from './pages/TentangKami';
 import MengapaKami from './pages/MengapaKami';
+import KontakKami from './pages/KontakKami';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
@@ -13,6 +14,7 @@ function App() {
           <Route exact path="/" render={() => <LandingPage />}/>
           <Route exact path="/about_us" render={() => <TentangKami />}/>
           <Route exact path="/why_us" render={() => <MengapaKami />}/>
+          <Route exact path="/contact_us" render={() => <KontakKami />}/>
           <Route exact path="/produk" render={() => <Produk />}/>
           <Route exact path="*" render={() => <NotFound />}/>
         </Switch>

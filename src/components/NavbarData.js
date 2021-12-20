@@ -1,7 +1,7 @@
 export const NavbarData = [
     {
         title: "Produk",
-        path: "/"
+        path: "/produk"
     },
     {
         title: "Mengapa Kami",
@@ -9,7 +9,7 @@ export const NavbarData = [
     },
     {
         title: "Kontak Kami",
-        path: "/"
+        path: "/contact_us"
     },
     {
         title: "Tentang Kami",

@@ -15,12 +15,15 @@ function Navbar() {
     const redirect = async (path) => {
         history.push(path)
     }
+    const goHome = async (path) => {
+        history.push("/")
+    }
     return (
         <>
             <div className={styles.navbar}>
                 <div className={styles.container}>
                     <div className={styles.RightItem}>
-                        <img src={logo} alt="" />
+                        <img src={logo} alt="" onClick={goHome}/>
                         <div className={styles.RightData}>
                         {
                             NavbarData.map((item, index) => {
@@ -48,7 +51,7 @@ function Navbar() {
                     NavbarData.map((item, index) => {
                         // console.log(isDown)
                         return(
-                            <div className={styles.dropdownItem} key={index}>
+                            <div className={styles.dropdownItem} key={index} onClick={() => redirect(item.path)}>
                                 {item.title}
                             </div>
                         )

@@ -160,3 +160,46 @@
     justify-content: center;
     border-radius: 100px;
 }
+
+@media only screen and (max-width: 1280px) {
+    .listImg{
+        flex-wrap: wrap;
+    }
+    .img img{
+        width: 80%;
+    }
+    .img{
+        width: 33%;
+    }
+    .text{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    .content{
+        width: 40%;
+        /* background-color: aqua; */
+    }
+    .text{
+        width: 60%;
+    }
+    .caraPemesanan{
+        height: 500px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .text{
+        width: 90%;
+    }
+    .caraPemesanan{
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .caraPemesanan{
+        height: 300px;
+    }
+}
