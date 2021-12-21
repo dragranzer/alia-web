@@ -2,8 +2,13 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import styles from '../assets/css/KontakKami.module.css';
+import {useHistory} from "react-router-dom";
 
 function KontakKami() {
+    let history = useHistory();
+    const submit = async () => {
+        history.push("/success")
+    }
     return (
         <div>
             <Navbar/>
@@ -167,6 +172,9 @@ function KontakKami() {
                         </div>
                     </div>
                     
+                </div>
+                <div className={styles.btnSubmit} onClick={submit}>
+                    Submit
                 </div>
             </div>
             <Footer/>

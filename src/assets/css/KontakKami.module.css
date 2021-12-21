@@ -131,6 +131,32 @@ textarea{
     flex-wrap: wrap;
 }
 
+.btnSubmit{
+    background: #31B380;
+    border-radius: 100px;
+    width: 80%;
+    height: 35px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.btnSubmit:hover{
+    background: #6ed1a9;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 900px) {
     .container{
         width: 80%;

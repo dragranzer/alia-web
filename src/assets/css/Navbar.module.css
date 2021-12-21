@@ -26,6 +26,10 @@
     width: 70%;
 }
 
+.RightItem img{
+    cursor: pointer;
+}
+
 .RightData{
     display: flex;
     /* background: aqua; */
@@ -37,9 +41,11 @@
 .item{
     font-family: Poppins;
     font-size: 18px;
-    /* width: 300px; */
-    /* background: aqua; */
-    /* width: 100%; */
+}
+
+.item:hover{
+    color: #5927E3;
+    cursor: pointer;
 }
 
 .container input{
@@ -101,7 +107,7 @@
 }
 
 .dropdownItem:hover{
-    background: rgb(39, 147, 219);
+    background: #5927E3;
     color: #FFFFFF;
 }
 
