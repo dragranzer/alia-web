@@ -168,3 +168,12 @@ textarea{
         width: 50%;
     }
 }
+
+@media only screen and (max-width: 400px) {
+    .container{
+        width: 100%;
+    }
+    .inputCheck{
+        width: 90%;
+    }
+}

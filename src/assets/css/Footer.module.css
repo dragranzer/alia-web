@@ -92,11 +92,12 @@
         /* background-color:royalblue; */
     }
     .item3{
-        width: 80%;
+        width: 100%;
         /* background: aqua; */
     }
     .item{
         height: 100px;
+        width: 50%;
         /* background-color: red; */
     }
 }
