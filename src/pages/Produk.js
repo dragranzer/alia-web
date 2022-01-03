@@ -79,16 +79,52 @@ function Produk() {
     const [toggle, setToggle] = useState(
         {
             flowmeter: false,
-            flowmeter1: false,
-            flowmeter2: false,
-            flowmeter3: false,
-            flowmeter4: false
+            presure: false,
+            temperature: false,
+            liquid: false,
+            panel: false,
+            other: false
         }
     );
     const showFlowmeter = () => {
         setToggle({
             ...toggle,
             flowmeter: !toggle.flowmeter,
+        })
+    };
+
+    const showPresure = () => {
+        setToggle({
+            ...toggle,
+            presure: !toggle.presure,
+        })
+    };
+
+    const showTemperature = () => {
+        setToggle({
+            ...toggle,
+            temperature: !toggle.temperature,
+        })
+    };
+
+    const showLiquid = () => {
+        setToggle({
+            ...toggle,
+            liquid: !toggle.liquid,
+        })
+    };
+
+    const showPanel = () => {
+        setToggle({
+            ...toggle,
+            panel: !toggle.panel,
+        })
+    };
+
+    const showOther = () => {
+        setToggle({
+            ...toggle,
+            other: !toggle.other,
         })
     };
     const goDetail = (id) => {
@@ -106,7 +142,7 @@ function Produk() {
                 </div>
             </div>
             <div className={styles.body}>
-                <div className={styles.dropdown}>
+            <div className={styles.dropdown}>
                     <div>
                         <div className={toggle.flowmeter ? styles.item1Active:styles.item1} onClick={showFlowmeter}>
                             <div className={toggle.flowmeter ? styles.categoryActive:styles.category}>
@@ -138,20 +174,60 @@ function Produk() {
                             </div>
                         }
                     </div>
-                    <div className={styles.item}>
-                        <div className={styles.category}>
-                            Flowmeter
+                    <div className={toggle.presure ? styles.itemActive:styles.item} onClick={showPresure}>
+                        <div className={toggle.presure ? styles.categoryActive:styles.category}>
+                            Pressure & Differential Pressure
                         </div>
+                        {
+                            toggle.presure ? 
+                            <AiIcons.AiOutlineUp size={15}/>
+                            :
+                            <AiIcons.AiOutlineDown size={15}/>
+                        }
                     </div>
-                    <div className={styles.item}>
-                        <div className={styles.category}>
-                            Flowmeter
+                    <div className={toggle.temperature ? styles.itemActive:styles.item} onClick={showTemperature}>
+                        <div className={toggle.temperature ? styles.categoryActive:styles.category}>
+                            Temperature & humidity
                         </div>
+                        {
+                            toggle.temperature ? 
+                            <AiIcons.AiOutlineUp size={15}/>
+                            :
+                            <AiIcons.AiOutlineDown size={15}/>
+                        }
                     </div>
-                    <div className={styles.item}>
-                        <div className={styles.category}>
-                            Flowmeter
+                    <div className={toggle.liquid ? styles.itemActive:styles.item} onClick={showLiquid}>
+                        <div className={toggle.liquid ? styles.categoryActive:styles.category}>
+                            Liquid Level
                         </div>
+                        {
+                            toggle.liquid ? 
+                            <AiIcons.AiOutlineUp size={15}/>
+                            :
+                            <AiIcons.AiOutlineDown size={15}/>
+                        }
+                    </div>
+                    <div className={toggle.panel ? styles.itemActive:styles.item} onClick={showPanel}>
+                        <div className={toggle.panel ? styles.categoryActive:styles.category}>
+                            Panel Meter
+                        </div>
+                        {
+                            toggle.panel ? 
+                            <AiIcons.AiOutlineUp size={15}/>
+                            :
+                            <AiIcons.AiOutlineDown size={15}/>
+                        }
+                    </div>
+                    <div className={toggle.other ? styles.itemActive:styles.item} onClick={showOther}>
+                        <div className={toggle.other ? styles.categoryActive:styles.category}>
+                            Other
+                        </div>
+                        {
+                            toggle.other ? 
+                            <AiIcons.AiOutlineUp size={15}/>
+                            :
+                            <AiIcons.AiOutlineDown size={15}/>
+                        }
                     </div>
                 </div>
                 <div className={styles.product}>
