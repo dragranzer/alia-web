@@ -58,15 +58,17 @@
     font-size: 16px;
     height: 40px;
     width: 100%;
+    /* font-family: Poppins; */
 }
 
 .item select{
     background: #F5F5F7;
     border: none;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 16px;
     height: 40px;
     width: 103%;
+    /* font-family: Poppins; */
 }
 
 .item textarea{
@@ -76,7 +78,7 @@
     font-size: 16px;
     height: 120px;
     width: 100%;
-    font-family: Poppins;
+    /* font-family: Poppins; */
 }
 
 .title2{
@@ -96,7 +98,7 @@ select{
     padding-left: 20px;
 }
 textarea{
-    padding-left: 20px;
+    padding: 10px;
 }
 
 .item2{
