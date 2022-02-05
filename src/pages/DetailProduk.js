@@ -22,8 +22,12 @@ function DetailProduk() {
         <li>Spesifikasi 2</li>
         <li>Spek 3</li>
         <li>Excellent for high pressure application</li>
-    </ul>`);
-
+    </ul>
+    <div> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda corrupti quos commodi perferendis 
+        vel dolor omnis. Reprehenderit aperiam, enim ex cumque inventore explicabo saepe, 
+        asperiores possimus ipsa debitis, eligendi ducimus.
+    </div>`);
     const [download, setDownload] = useState(`
     <a href="#">Link dokument.pdf</a>
     `);
@@ -304,7 +308,7 @@ function DetailProduk() {
                         }
                         {
                             mode.spesifikasi ?
-                            <div dangerouslySetInnerHTML={{__html: spesifikasi}}></div>
+                            <div dangerouslySetInnerHTML={{__html: spesifikasi}} className={styles.spekColumn}></div>
                             :
                             <></>
                         }

@@ -20,8 +20,77 @@ function KontakKami() {
         catatan: "",
         tertarik: "",
     })
+
+    const [tertarik, setTertarik] = useState([
+        {
+            id:1,
+            name:"Barang1"
+        },
+        {
+            id:2,
+            name:"Barang2"
+        },
+        {
+            id:3,
+            name:"Barang3"
+        },
+        {
+            id:4,
+            name:"Barang4"
+        },
+        {
+            id:5,
+            name:"Barang5"
+        },
+        {
+            id:6,
+            name:"Barang6"
+        },
+        {
+            id:7,
+            name:"Barang7"
+        },
+        {
+            id:8,
+            name:"Barang8"
+        },
+        {
+            id:9,
+            name:"Barang9"
+        },
+        {
+            id:10,
+            name:"Barang10"
+        },
+        {
+            id:11,
+            name:"Barang11"
+        },
+        {
+            id:12,
+            name:"Barang12"
+        },
+    ])
+    const [checkedState, setCheckedState] = useState(
+        new Array(12).fill(false)
+    );
+
+    const handleOnChange = async (position) => {
+        const updatedCheckedState = checkedState.map((item, index) =>
+            index === position ? !item : item
+        );
+        setCheckedState(updatedCheckedState);   
+    }
+
     const submit = async () => {
+        let list = []
+        checkedState.map((item, index) => {
+            if(item === true){
+                list.push(tertarik[index-1]);
+            }
+        })
         history.push("/success")
+        console.log("submit ",list)
     }
     const handleChange = (e) => {
         setPesan({
@@ -130,80 +199,23 @@ function KontakKami() {
                         Tertarik dengan
                     </div>
                     <div className={styles.checkData}>
-                        <div className={styles.item2}>
-                            <input type="checkbox" />
-                            <div className={styles.detail}>
-                                Flowmeter
-                            </div>
-                        </div>
-                        <div className={styles.item2}>
-                            <input type="checkbox" />
-                            <div className={styles.detail}>
-                                Watermeter
-                            </div>
-                        </div>
-                        <div className={styles.item2}>
-                            <input type="checkbox" />
-                            <div className={styles.detail}>
-                                Gaussian
-                            </div>
-                        </div>
-                        <div className={styles.item2}>
-                            <input type="checkbox" />
-                            <div className={styles.detail}>
-                                Flowmeter
-                            </div>
-                        </div>
-                        <div className={styles.item2}>
-                            <input type="checkbox" />
-                            <div className={styles.detail}>
-                                Flowmeter
-                            </div>
-                        </div>
-                        <div className={styles.item2}>
-                            <input type="checkbox" />
-                            <div className={styles.detail}>
-                                Flowmeter
-                            </div>
-                        </div>
-                        <div className={styles.item2}>
-                            <input type="checkbox" />
-                            <div className={styles.detail}>
-                                Flowmeter
-                            </div>
-                        </div>
-                        <div className={styles.item2}>
-                            <input type="checkbox" />
-                            <div className={styles.detail}>
-                                Flowmeter
-                            </div>
-                        </div>
-                        <div className={styles.item2}>
-                            <input type="checkbox" />
-                            <div className={styles.detail}>
-                                Flowmeter
-                            </div>
-                        </div>
-                        <div className={styles.item2}>
-                            <input type="checkbox" />
-                            <div className={styles.detail}>
-                                Flowmeter
-                            </div>
-                        </div>
-                        <div className={styles.item2}>
-                            <input type="checkbox" />
-                            <div className={styles.detail}>
-                                Flowmeter
-                            </div>
-                        </div>
-                        <div className={styles.item2}>
-                            <input type="checkbox" />
-                            <div className={styles.detail}>
-                                Flowmeter
-                            </div>
-                        </div>
+                        {
+                            tertarik.map((item, index) =>{
+                                return(
+                                    <div className={styles.item2} key={item.id}>
+                                        <input 
+                                            type="checkbox" 
+                                            checked={checkedState[item.id]}
+                                            onChange={() => handleOnChange(item.id)}
+                                        />
+                                        <div className={styles.detail}>
+                                            {item.name}
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
-                    
                 </div>
                 <div className={styles.btnSubmit} onClick={submit}>
                     Submit

@@ -254,3 +254,13 @@
 .data{
     margin-left: 50px;
 }
+
+*{padding-top:0; margin-top:0;}
+
+.spekColumn{
+    min-height: 100px;
+    column-count: 2;
+    margin-top: 20px;
+    /* background-color: aqua; */
+    column-gap: 40px;
+}
